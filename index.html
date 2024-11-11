@@ -5,28 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Transform your understanding of AI through expert guidance at intelliAI Pro Journey">
     <title>intelliAI Pro Journey - Your Path to AI Mastery</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="main-nav">
         <div class="nav-content">
-            <a href="/" class="logo">intelliAI</a>
+            <a href="#home" class="logo">intelliAI</a>
             <button class="mobile-menu-btn" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <main>
-        <section class="hero">
+        <section id="home" class="hero">
             <div class="hero-content">
                 <h1>Empowering Your AI Journey</h1>
                 <p>Transform your understanding of AI through expert guidance</p>
@@ -56,6 +56,36 @@
                 </div>
             </div>
         </section>
+
+        <section id="blog" class="blog">
+            <h2>Latest Insights</h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <h3>Understanding AI Fundamentals</h3>
+                    <p>Explore the basic concepts that power modern AI systems.</p>
+                </div>
+                <div class="blog-card">
+                    <h3>Machine Learning Best Practices</h3>
+                    <p>Learn how to implement ML solutions effectively.</p>
+                </div>
+                <div class="blog-card">
+                    <h3>AI Ethics and Responsibility</h3>
+                    <p>Navigate the ethical considerations in AI development.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Get in Touch</h2>
+            <div class="contact-content">
+                <p>Ready to start your AI journey? Contact us today.</p>
+                <form class="contact-form">
+                    <input type="email" placeholder="Your email" required>
+                    <textarea placeholder="Your message" required></textarea>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -64,6 +94,6 @@
         </div>
     </footer>
 
-    <script src="/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
