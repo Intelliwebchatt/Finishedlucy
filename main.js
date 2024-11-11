@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Get the target section
-            const targetId = link.getAttribute('href').slice(1);
-            const targetSection = document.getElementById(targetId);
+            const targetId = link.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
                 targetSection.scrollIntoView({
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Optional: Intersection Observer for scroll animations
+    // Intersection Observer for scroll animations
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '50px'
@@ -87,8 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                // Optional: Stop observing after animation
-                // observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -97,27 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('section').forEach(section => {
         observer.observe(section);
     });
-
-    // Optional: Add touch support for mobile
-    let touchStartY = 0;
-    let touchEndY = 0;
-
-    document.addEventListener('touchstart', e => {
-        touchStartY = e.touches[0].clientY;
-    }, false);
-
-    document.addEventListener('touchend', e => {
-        touchEndY = e.changedTouches[0].clientY;
-        
-        // Optional: Add custom touch navigation logic here
-        const touchDiff = touchStartY - touchEndY;
-        if (Math.abs(touchDiff) > 50) {
-            // Handle touch scroll
-        }
-    }, false);
 });
 
-// Optional: Add window resize handler
+// Handle window resize
 window.addEventListener('resize', () => {
     // Close mobile menu if window is resized past mobile breakpoint
     if (window.innerWidth > 768) {
